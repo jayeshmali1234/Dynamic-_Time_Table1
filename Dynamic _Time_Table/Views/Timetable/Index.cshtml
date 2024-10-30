@@ -6,7 +6,7 @@
 }
 
 <h2>Enter Timetable Details</h2>
-@using (Html.BeginForm("CalculateTotalHours", "Timetable", FormMethod.Post))
+@using (Html.BeginForm("CalculateTotalHours", "Timetable", FormMethod.Post, new {@class="btn btn-danger"}))
 {
     <label>Working Days (1-7):</label>
     @Html.TextBoxFor(m => m.WorkingDays, new { @type = "number", min = 1, max = 7 })

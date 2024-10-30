@@ -5,7 +5,14 @@
 }
 
 <h2>Your Generated Timetable</h2>
-
+<style>
+    *{
+        color:red;
+    }
+    table{
+        background-color:lightblue;
+    }
+</style>
 @if (timetable == null || !timetable.Any())
 {
     <p>Error: Timetable could not be generated. Please check your input and try again.</p>
