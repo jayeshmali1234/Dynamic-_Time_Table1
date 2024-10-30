@@ -1,0 +1,38 @@
+﻿@model Dynamic__Time_Table.Models.TimetableModel
+@{
+    ViewBag.Title = "Generated Timetable";
+    var timetable = ViewBag.Timetable as List<List<string>>;
+}
+
+<h2>Your Generated Timetable</h2>
+
+@if (timetable == null || !timetable.Any())
+{
+    <p>Error: Timetable could not be generated. Please check your input and try again.</p>
+}
+
+else
+{
+    <table border="1" style="width:100%; text-align:center;">
+        <thead>
+            <tr>
+                @for (int day = 1; day <= Model.WorkingDays; day++)
+                {
+                    <th>Day @day</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in timetable)
+            {
+                <tr>
+                    @foreach (var subject in row)
+                    {
+                        <td>@subject</td>
+                        <td></td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}

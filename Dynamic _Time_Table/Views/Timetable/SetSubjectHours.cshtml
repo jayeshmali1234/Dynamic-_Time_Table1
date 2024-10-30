@@ -1,0 +1,27 @@
+﻿@model Dynamic__Time_Table.Models.TimetableModel
+@{
+    ViewBag.Title = "Set Subject Hours";
+}
+
+<h2>Allocate Hours to Each Subject</h2>
+<p>Total Hours for the Week: <strong>@Model.TotalHours</strong></p>
+
+@using (Html.BeginForm("GenerateTimetable", "Timetable", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.WorkingDays)
+    @Html.HiddenFor(m => m.SubjectsPerDay)
+    @Html.HiddenFor(m => m.TotalSubjects)
+
+    <div>
+        <p>Allocate hours so they add up to @Model.TotalHours</p>
+        @for (int i = 0; i < Model.Subjects.Count; i++)
+        {
+            @Html.HiddenFor(m => m.Subjects[i].Name)
+            <label>@Model.Subjects[i].Name:</label>
+            @Html.TextBoxFor(m => m.Subjects[i].Hours, new { @type = "number", min = 1, required = "required" })
+            <br />
+        }
+    </div>
+
+    <button type="submit">Generate Timetable</button>
+}

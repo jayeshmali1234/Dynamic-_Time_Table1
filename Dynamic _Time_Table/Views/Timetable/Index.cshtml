@@ -1,0 +1,21 @@
+﻿
+@model Dynamic__Time_Table.Models.TimetableModel
+
+@{
+    ViewBag.Title = "Dynamic Time-Table Generator";
+}
+
+<h2>Enter Timetable Details</h2>
+@using (Html.BeginForm("CalculateTotalHours", "Timetable", FormMethod.Post))
+{
+    <label>Working Days (1-7):</label>
+    @Html.TextBoxFor(m => m.WorkingDays, new { @type = "number", min = 1, max = 7 })
+
+    <label>Subjects per Day (1-8):</label>
+    @Html.TextBoxFor(m => m.SubjectsPerDay, new { @type = "number", min = 1, max = 8 })
+
+    <label>Total Subjects:</label>
+    @Html.TextBoxFor(m => m.TotalSubjects, new { @type = "number", min = 1 })
+
+    <button type="submit">Calculate Total Hours</button>
+}
