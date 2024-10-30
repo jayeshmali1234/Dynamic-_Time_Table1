@@ -1,4 +1,4 @@
-#### This is a dynamic time table
+# This is a dynamic time table
 
 ##  Enter Time Table Details
 ![Enter Time](https://github.com/user-attachments/assets/ff6c27fc-a132-4448-98ec-50e7938d8bd5)
