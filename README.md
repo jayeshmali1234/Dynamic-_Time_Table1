@@ -1,11 +1,10 @@
 # This is a dynamic time table
 
 ##  Enter Time Table Details
-![Enter Time](https://github.com/user-attachments/assets/ff6c27fc-a132-4448-98ec-50e7938d8bd5)
+![Timetable deatils](https://github.com/user-attachments/assets/0e15d137-2f70-425a-8bd0-aef1f5c66df9)
 
 ## Enter Subject Per Hourse
-![Enter Subject Hourse](https://github.com/user-attachments/assets/81066c54-2ff6-4966-969c-3c7ebb9d77f2)
-
+![Subject](https://github.com/user-attachments/assets/dcde740d-a3e3-4b17-8b77-ccacd64e729a)
 
 ##  Your Generated  Timeable
-![Final](https://github.com/user-attachments/assets/d9561b55-2ecb-46fc-a8c2-63cbf41ede80)
+![Final](https://github.com/user-attachments/assets/8720c067-6706-407b-b061-d87ec520dd43)
